@@ -118,9 +118,6 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CORS
-CORS_ORIGIN_ALLOW_ALL = True  # If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect
-CORS_ALLOW_CREDENTIALS = True
 
 # https proxy
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -146,7 +143,8 @@ CSRF_TRUSTED_ORIGINS = ["http://localhost",
                         "http://localhost:5001",
                         "http://localhost:3001",
                         "http://localhost:8000",
-                        "http://localhost:5173", ]
+                        "http://localhost:5173", 
+                        "https://dostavka-akb.kg"]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
@@ -154,6 +152,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3001",
     "http://localhost:8000",
     "http://localhost:5173",
+    "https://dostavka-akb.kg",
 ]
 
 CORS_ALLOW_METHODS = (
@@ -165,6 +164,7 @@ CORS_ALLOW_METHODS = (
     "PUT",
 )
 
-CORS_ALLOW_HEADERS = ['Authorization', 'Content-Type', "Accept-Language", ]
+CORS_ALLOW_HEADERS = ['Authorization', 'Content-Type', "Accept-Language",]
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = False 
+CORS_ALLOW_CREDENTIALS = True

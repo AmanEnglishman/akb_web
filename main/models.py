@@ -14,7 +14,7 @@ class Feedback(models.Model):
         super().save(*args, **kwargs)
 
         bot_token = '7130510261:AAEWidIK9jjtC70jN1YhGts7Ph57hD0rGBE'
-        chat_id = '5249187638'
+        chat_id = '5556117159'
 
         bot = telebot.TeleBot(bot_token)
         message_text = (f"ФИО: {self.name}\n"
